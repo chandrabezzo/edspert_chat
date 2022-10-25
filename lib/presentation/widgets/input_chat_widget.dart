@@ -8,7 +8,7 @@ class InputChatWidget extends StatelessWidget {
     this.onTapSend,
   });
 
-  final GestureTapCallback? onTapAdd;
+  final Function()? onTapAdd;
   final GestureTapCallback? onTapCamera;
   final GestureTapCallback? onTapSend;
 
