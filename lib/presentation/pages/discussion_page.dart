@@ -71,7 +71,7 @@ class DiscussionPage<C extends DiscussionController> extends GetView<C> {
       child: Padding(
         padding: EdgeInsets.only(bottom: bottomPadding),
         child: InputChatWidget(
-          onTapAdd: () => debugPrint('add'),
+          onTapAdd: () => onTapAdd(context),
           onTapCamera: () => onTapCamera(context),
           onTapSend: () => onSend(context),
         ),
@@ -86,5 +86,9 @@ class DiscussionPage<C extends DiscussionController> extends GetView<C> {
   void onSend(BuildContext context) {
     final fileName = controller.selectedFile?.name;
     debugPrint(fileName);
+  }
+
+  void onTapAdd(BuildContext context) {
+    debugPrint(controller.messageLength.toString());
   }
 }

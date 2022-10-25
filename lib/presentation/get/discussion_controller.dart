@@ -38,4 +38,6 @@ class DiscussionController extends GetxController {
     final cameraFile = await _picker.pickImage(source: ImageSource.camera);
     _selectedFile.value = cameraFile;
   }
+
+  int get messageLength => _messages.value.length;
 }
